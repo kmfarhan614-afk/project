@@ -1,0 +1,765 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="theme-color" content="#0b0b0c" />
+<meta name="description" content="All projects in one page — Farhan Skincare, MFK Fragrances and the New Trimmer Salon ERP." />
+<title>Farhan — All Projects</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%23c6f36b'/%3E%3Ctext x='32' y='45' font-family='Georgia' font-size='32' font-weight='700' text-anchor='middle' fill='%230b0b0c'%3EF%3C/text%3E%3C/svg%3E" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+<style>
+  :root {
+    --ink: #0b0b0c;
+    --ink-2: #101012;
+    --paper: #f2efe8;
+    --muted: #9a988f;
+    --line: rgba(255, 255, 255, .09);
+    --line-strong: rgba(255, 255, 255, .16);
+    --green: #c6f36b;
+    --mint: #7ef0c8;
+    --gold: #d8b46a;
+    --gold-soft: #f1d18e;
+    --sans: "Manrope", "Segoe UI", system-ui, -apple-system, sans-serif;
+    --serif: "Instrument Serif", "Times New Roman", Georgia, serif;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+  body {
+    font-family: var(--sans);
+    background: var(--ink);
+    color: var(--paper);
+    line-height: 1.6;
+    overflow-x: hidden;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  body::after {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    pointer-events: none;
+    opacity: .028;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  }
+  ::selection { background: var(--green); color: var(--ink); }
+  a { color: inherit; }
+  img, svg { display: block; }
+  .shell { width: min(1200px, 92%); margin-inline: auto; }
+  .section { padding: clamp(64px, 8vw, 116px) 0; scroll-margin-top: 84px; }
+  h1, h2, h3 { text-wrap: balance; }
+  h1, h2 { font-family: var(--serif); font-weight: 400; letter-spacing: -.015em; line-height: .98; }
+  h1 em, h2 em { font-style: italic; }
+
+  .eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    font-size: .7rem;
+    font-weight: 700;
+    letter-spacing: .26em;
+    text-transform: uppercase;
+    color: var(--acc, var(--green));
+  }
+  .eyebrow::before { content: ""; width: 26px; height: 1px; background: currentColor; opacity: .7; }
+  .section-head { max-width: 680px; margin-bottom: clamp(32px, 4.5vw, 54px); }
+  .section-head h2 { margin: 16px 0 16px; font-size: clamp(2.2rem, 4.4vw, 3.8rem); }
+  .section-head h2 em { color: var(--acc, var(--green)); }
+  .section-head p { color: var(--muted); font-size: clamp(.95rem, 1.1vw, 1.05rem); line-height: 1.75; }
+
+  /* Buttons */
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 9px;
+    border-radius: 999px;
+    font-family: var(--sans);
+    font-weight: 700;
+    font-size: .88rem;
+    text-decoration: none;
+    border: 1px solid transparent;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: transform .25s ease, box-shadow .25s ease, background .25s ease, border-color .25s ease, color .25s ease;
+  }
+  .btn svg { transition: transform .25s ease; }
+  .btn:hover svg { transform: translateX(3px); }
+  .btn-lg { padding: 15px 26px; }
+  .btn-sm { padding: 10px 18px; font-size: .78rem; }
+  .btn-solid {
+    background: var(--acc, var(--green));
+    color: #0e0f0c;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, .22);
+  }
+  .btn-solid:hover { transform: translateY(-2px); }
+  .btn-outline { border-color: var(--line-strong); color: var(--paper); background: transparent; }
+  .btn-outline:hover { border-color: var(--acc, var(--green)); color: var(--acc, var(--green)); }
+
+  /* Header */
+  .site-header {
+    position: sticky; top: 0; z-index: 60;
+    background: rgba(11, 11, 12, .72);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border-bottom: 1px solid var(--line);
+  }
+  .nav-shell { display: flex; align-items: center; justify-content: space-between; gap: 20px; height: 72px; }
+  .brand { display: inline-flex; align-items: center; gap: 11px; text-decoration: none; }
+  .brand-mark {
+    width: 36px; height: 36px; border-radius: 50%; display: grid; place-items: center;
+    background: var(--green); color: var(--ink);
+    font-family: var(--serif); font-size: 1.35rem; line-height: 1; padding-bottom: 2px;
+  }
+  .brand-name { display: flex; flex-direction: column; line-height: 1; font-weight: 800; letter-spacing: .16em; font-size: .95rem; }
+  .brand-name small { font-size: .5rem; letter-spacing: .34em; color: var(--muted); margin-top: 6px; font-weight: 600; }
+  .nav-links { display: flex; gap: clamp(16px, 2.2vw, 30px); }
+  .nav-links a { text-decoration: none; color: var(--muted); font-size: .85rem; font-weight: 500; transition: color .2s ease; }
+  .nav-links a:hover { color: var(--paper); }
+
+  /* Intro */
+  .intro { padding: clamp(56px, 8vw, 104px) 0 clamp(40px, 5vw, 64px); }
+  .intro h1 { margin: 18px 0 0; font-size: clamp(3rem, 7vw, 6.2rem); letter-spacing: -.025em; line-height: .92; }
+  .intro h1 em { color: var(--green); }
+  .intro .lead { color: var(--muted); font-size: clamp(1rem, 1.15vw, 1.1rem); max-width: 56ch; margin-top: 24px; line-height: 1.75; }
+  .quick { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 32px; }
+  .quick a {
+    display: inline-flex; align-items: center; gap: 9px;
+    text-decoration: none; font-size: .78rem; font-weight: 700; letter-spacing: .04em;
+    border: 1px solid var(--line); border-radius: 999px; padding: 10px 16px;
+    color: var(--muted); transition: border-color .2s ease, color .2s ease, transform .2s ease;
+  }
+  .quick a:hover { border-color: var(--line-strong); color: var(--paper); transform: translateY(-2px); }
+  .quick a i { width: 6px; height: 6px; border-radius: 50%; background: var(--green); }
+  .quick a.g i { background: var(--gold); }
+  .quick a.m i { background: var(--mint); }
+
+  /* Shared project layout */
+  .proj-head { display: flex; align-items: flex-end; justify-content: space-between; gap: 24px; flex-wrap: wrap; margin-bottom: clamp(32px, 4.5vw, 56px); }
+  .proj-head .num { font-family: var(--serif); font-style: italic; font-size: 1rem; color: var(--muted); }
+  .proj-head h2 { margin-top: 10px; font-size: clamp(2.4rem, 5vw, 4.4rem); }
+  .proj-head h2 em { color: var(--acc, var(--green)); }
+  .proj-head p { color: var(--muted); max-width: 40ch; font-size: .95rem; line-height: 1.7; }
+
+  .split { display: grid; grid-template-columns: 1.05fr .95fr; gap: clamp(36px, 5vw, 72px); align-items: center; }
+  .split-copy .eyebrow { margin-bottom: 18px; }
+  .split-copy h3 { font-family: var(--serif); font-weight: 400; font-size: clamp(2rem, 3.6vw, 3.2rem); line-height: 1; letter-spacing: -.015em; margin-bottom: 18px; }
+  .split-copy h3 em { color: var(--acc, var(--green)); }
+  .split-copy p { color: var(--muted); line-height: 1.8; max-width: 48ch; }
+  .cta-row { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 28px; }
+
+  /* ---------- Section 01: Skincare ---------- */
+  .sec-skincare { --acc: var(--green); --acc-soft: var(--mint); background: linear-gradient(180deg, var(--ink), var(--ink-2)); border-block: 1px solid var(--line); }
+
+  .product-stage {
+    position: relative;
+    isolation: isolate;
+    aspect-ratio: 4 / 4.4;
+    width: 100%;
+    border-radius: clamp(22px, 2.6vw, 36px);
+    border: 1px solid var(--line);
+    overflow: hidden;
+    display: grid;
+    place-items: center;
+    background:
+      radial-gradient(circle at 50% 16%, rgba(198, 243, 107, .2), transparent 55%),
+      radial-gradient(circle at 84% 88%, rgba(126, 240, 200, .12), transparent 55%),
+      linear-gradient(165deg, #171a13, #0d0e0b 62%);
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, .06), 0 40px 90px rgba(0, 0, 0, .5);
+  }
+  .stage-rings::before,
+  .stage-rings::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 52%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    border: 1px solid rgba(198, 243, 107, .16);
+  }
+  .stage-rings::before { width: 68%; aspect-ratio: 1; }
+  .stage-rings::after { width: 96%; aspect-ratio: 1; border-color: rgba(255, 255, 255, .05); }
+
+  .tube {
+    position: relative;
+    z-index: 2;
+    width: clamp(130px, 15vw, 190px);
+    aspect-ratio: 1 / 2.1;
+    border-radius: 20px 20px 30px 30px;
+    background: linear-gradient(100deg, #20251a 0%, #2d3323 24%, #1a1e15 62%, #11140e 100%);
+    border: 1px solid rgba(255, 255, 255, .08);
+    box-shadow:
+      inset -16px 0 34px rgba(0, 0, 0, .55),
+      inset 12px 0 26px rgba(255, 255, 255, .04),
+      0 34px 64px rgba(0, 0, 0, .55);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  .tube .cap {
+    position: absolute;
+    top: -5%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 44%;
+    height: 8%;
+    border-radius: 8px 8px 4px 4px;
+    background: linear-gradient(180deg, #3b452f, #1a1f15);
+    border: 1px solid rgba(255, 255, 255, .08);
+  }
+  .tube-label { display: flex; flex-direction: column; align-items: center; gap: 8px; }
+  .tl-brand { font-weight: 800; letter-spacing: .24em; font-size: clamp(.9rem, 1.4vw, 1.3rem); }
+  .tl-line { width: 24px; height: 1px; background: var(--green); opacity: .8; }
+  .tl-type { font-size: clamp(.46rem, .64vw, .62rem); letter-spacing: .42em; text-transform: uppercase; color: var(--green); }
+  .tl-meta { font-size: clamp(.46rem, .58vw, .56rem); letter-spacing: .2em; text-transform: uppercase; color: var(--muted); }
+  .tube-shine {
+    position: absolute; inset: 0; border-radius: inherit; pointer-events: none;
+    background: linear-gradient(115deg, rgba(255, 255, 255, .1), transparent 32%, transparent 68%, rgba(0, 0, 0, .28));
+  }
+
+  .seal { position: absolute; top: 5%; left: 6%; z-index: 3; width: clamp(70px, 8vw, 100px); aspect-ratio: 1; display: grid; place-items: center; }
+  .seal > svg { position: absolute; inset: 0; width: 100%; height: 100%; animation: spin 24s linear infinite; }
+  .seal text { fill: var(--muted); font-family: var(--sans); font-size: 7.3px; letter-spacing: .21em; text-transform: uppercase; }
+  .seal-core {
+    position: relative; width: 36%; aspect-ratio: 1; border-radius: 50%;
+    display: grid; place-items: center; background: var(--green); color: var(--ink);
+  }
+  .seal-core svg { width: 46%; height: 46%; }
+  @keyframes spin { to { transform: rotate(360deg); } }
+
+  .chip {
+    position: absolute; z-index: 3; padding: 9px 14px; border-radius: 12px;
+    border: 1px solid var(--line); background: rgba(12, 13, 11, .72);
+    backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);
+    font-size: .68rem; letter-spacing: .04em; color: var(--muted);
+  }
+  .chip b { color: var(--paper); font-weight: 800; }
+  .chip-a { bottom: 8%; left: 6%; }
+  .chip-b { bottom: 19%; right: 5%; }
+
+  .benefits { display: grid; grid-template-columns: repeat(4, 1fr); gap: clamp(16px, 2.2vw, 26px); margin-top: clamp(40px, 5vw, 64px); }
+  .benefit { border-top: 1px solid var(--line); padding-top: 22px; }
+  .benefit .b-num { font-family: var(--serif); font-style: italic; color: var(--acc); font-size: 1rem; }
+  .benefit h4 { font-size: 1rem; margin: 10px 0 6px; }
+  .benefit p { color: var(--muted); font-size: .86rem; line-height: 1.65; }
+
+  .plans { display: grid; grid-template-columns: repeat(3, 1fr); gap: clamp(14px, 2vw, 22px); margin-top: clamp(36px, 4.5vw, 52px); }
+  .plan {
+    position: relative; display: flex; flex-direction: column; gap: 4px;
+    padding: clamp(22px, 2.6vw, 30px); border-radius: 20px;
+    border: 1px solid var(--line); background: var(--ink);
+  }
+  .plan.featured { background: var(--paper); color: var(--ink); border-color: var(--paper); }
+  .plan.featured .plan-name,
+  .plan.featured .plan-sub { color: #45443e; }
+  .plan-name { font-size: .92rem; font-weight: 800; letter-spacing: .04em; }
+  .plan-sub { color: var(--muted); font-size: .74rem; letter-spacing: .04em; }
+  .plan-price { font-family: var(--serif); font-size: clamp(2rem, 2.8vw, 2.6rem); line-height: 1; margin-top: 10px; }
+  .plan-price small { font-family: var(--sans); font-size: .7rem; color: var(--muted); font-weight: 500; }
+  .plan.featured .plan-price small { color: #66645c; }
+  .plan .btn { margin-top: 18px; width: 100%; }
+
+  /* ---------- Section 02: Fragrances ---------- */
+  .sec-fragrance {
+    --acc: var(--gold); --acc-soft: var(--gold-soft);
+    background:
+      radial-gradient(circle at 78% 30%, rgba(120, 88, 40, .22), transparent 55%),
+      linear-gradient(180deg, #0e0c09, var(--ink));
+    border-bottom: 1px solid var(--line);
+  }
+  .sec-fragrance .btn-solid { background: var(--gold); }
+  .sec-fragrance .btn-outline:hover { border-color: var(--gold); color: var(--gold); }
+  .sec-fragrance .eyebrow { color: var(--gold); }
+
+  .bottle-stage { position: relative; display: grid; place-items: center; min-height: clamp(320px, 38vw, 440px); }
+  .bottle-stage::before {
+    content: ""; position: absolute; width: 62%; aspect-ratio: 1; border-radius: 50%;
+    background: radial-gradient(circle, rgba(216, 180, 106, .18), transparent 65%);
+    filter: blur(10px);
+  }
+  .bottle {
+    position: relative; width: clamp(150px, 17vw, 210px); aspect-ratio: 1 / 1.42;
+    border-radius: 16px 16px 32px 32px;
+    background: linear-gradient(120deg, #342613, #a77b37, #3b2815);
+    border: 2px solid #e0c17c;
+    display: grid; place-items: center;
+    box-shadow: 0 0 95px rgba(200, 156, 75, .25), inset -14px 0 30px rgba(0, 0, 0, .4);
+    animation: float 6s ease-in-out infinite;
+  }
+  .bottle::before {
+    content: ""; position: absolute; top: -16%; width: 46%; height: 17%;
+    border-radius: 8px 8px 3px 3px; background: linear-gradient(#e0c17c, #705322);
+  }
+  .bottle b { font-family: var(--serif); font-size: clamp(2rem, 3vw, 2.8rem); letter-spacing: 5px; color: var(--paper); }
+  .bottle small { position: absolute; bottom: 18%; font-size: .5rem; letter-spacing: .34em; color: #3b2a12; font-weight: 800; }
+  @keyframes float { 50% { transform: translateY(-16px); } }
+
+  .product-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: clamp(16px, 2.2vw, 26px); margin-top: clamp(40px, 5vw, 60px); }
+  .product {
+    background: #161411; border: 1px solid #302819; border-radius: 14px;
+    padding: clamp(20px, 2.4vw, 28px); text-align: center;
+    transition: transform .3s ease, border-color .3s ease;
+  }
+  .product:hover { transform: translateY(-6px); border-color: var(--gold); }
+  .product-art { height: 170px; display: grid; place-items: center; background: radial-gradient(circle, #493621, transparent 70%); }
+  .mini {
+    position: relative; width: 78px; height: 118px; border-radius: 8px 8px 16px 16px;
+    background: linear-gradient(110deg, #403015, #ae8848, #493018);
+    border: 1px solid var(--gold); display: grid; place-items: center;
+    font-family: var(--serif); font-size: 1.05rem; letter-spacing: 2px;
+  }
+  .mini::before { content: ""; position: absolute; top: -20px; width: 40px; height: 20px; border-radius: 4px 4px 0 0; background: var(--gold); }
+  .product h4 { font-family: var(--serif); font-weight: 400; font-size: 1.35rem; margin-top: 8px; }
+  .product .notes { color: var(--muted); font-size: .84rem; margin: 6px 0 4px; }
+  .product .price { color: var(--gold); font-weight: 800; font-size: 1rem; margin: 12px 0 16px; }
+  .product .btn { width: 100%; }
+
+  .philosophy {
+    display: grid; grid-template-columns: auto 1fr auto; align-items: center; gap: clamp(20px, 3vw, 40px);
+    margin-top: clamp(40px, 5vw, 60px); padding: clamp(24px, 3vw, 38px);
+    border: 1px solid #302819; border-radius: 20px;
+    background: linear-gradient(120deg, #15120e, #0d0b08);
+  }
+  .philosophy .ph-mark { font-family: var(--serif); font-size: clamp(2.4rem, 4vw, 3.4rem); color: var(--gold); letter-spacing: 4px; }
+  .philosophy p { color: var(--muted); font-size: .92rem; line-height: 1.7; }
+
+  /* ---------- Section 03: Salon ERP ---------- */
+  .sec-erp {
+    --acc: var(--mint); --acc-soft: var(--green);
+    background: linear-gradient(180deg, var(--ink-2), var(--ink));
+    border-bottom: 1px solid var(--line);
+  }
+  .sec-erp .eyebrow { color: var(--mint); }
+  .sec-erp .btn-solid { background: var(--mint); }
+
+  .erp-grid { display: grid; grid-template-columns: 1.25fr .75fr; gap: clamp(28px, 4vw, 52px); align-items: start; }
+  .window {
+    border: 1px solid var(--line); border-radius: 18px; overflow: hidden;
+    background: linear-gradient(165deg, #15171b, #0d0f12);
+    box-shadow: 0 34px 80px rgba(0, 0, 0, .5);
+  }
+  .win-bar { display: flex; align-items: center; gap: 8px; padding: 12px 16px; border-bottom: 1px solid var(--line); background: rgba(255, 255, 255, .02); }
+  .win-bar i { width: 10px; height: 10px; border-radius: 50%; background: #3a3d42; }
+  .win-bar i:nth-child(1) { background: #e0655a; }
+  .win-bar i:nth-child(2) { background: #e0b45a; }
+  .win-bar i:nth-child(3) { background: #6fcf7a; }
+  .win-bar span { margin-left: auto; font-size: .62rem; letter-spacing: .18em; text-transform: uppercase; color: var(--muted); }
+  .win-body { padding: clamp(16px, 2.2vw, 24px); }
+  .win-title { font-size: .72rem; letter-spacing: .18em; text-transform: uppercase; color: var(--muted); margin-bottom: 14px; }
+  .stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; }
+  .stat { border: 1px solid var(--line); border-radius: 12px; padding: 14px; background: rgba(255, 255, 255, .02); }
+  .stat small { display: block; font-size: .6rem; letter-spacing: .14em; text-transform: uppercase; color: var(--muted); margin-bottom: 6px; }
+  .stat b { font-family: var(--serif); font-weight: 400; font-size: clamp(1.3rem, 2vw, 1.7rem); line-height: 1; }
+  .stat .up { display: inline-block; margin-top: 6px; font-size: .62rem; font-weight: 700; color: var(--mint); }
+
+  .chart { display: flex; align-items: flex-end; gap: clamp(6px, 1vw, 12px); height: 140px; margin-top: 20px; padding-top: 8px; }
+  .chart .bar { flex: 1; display: flex; flex-direction: column; justify-content: flex-end; align-items: center; gap: 6px; height: 100%; }
+  .chart .bar span {
+    width: 100%; border-radius: 5px 5px 2px 2px;
+    background: linear-gradient(180deg, var(--mint), rgba(126, 240, 200, .22));
+    height: var(--h); transition: filter .2s ease;
+  }
+  .chart .bar:hover span { filter: brightness(1.25); }
+  .chart .bar em { font-size: .58rem; font-style: normal; color: var(--muted); letter-spacing: .06em; }
+
+  .services { list-style: none; margin-top: 18px; display: grid; gap: 10px; }
+  .services li { display: grid; grid-template-columns: 1fr auto; gap: 4px 12px; align-items: center; font-size: .8rem; }
+  .services .sname { color: var(--paper); }
+  .services .sval { color: var(--muted); font-size: .74rem; }
+  .services .track { grid-column: 1 / -1; height: 4px; border-radius: 99px; background: rgba(255, 255, 255, .07); overflow: hidden; }
+  .services .track i { display: block; height: 100%; width: var(--w); border-radius: inherit; background: linear-gradient(90deg, var(--mint), var(--green)); }
+
+  .erp-side .eyebrow { color: var(--mint); }
+  .erp-side h3 { font-family: var(--serif); font-weight: 400; font-size: clamp(2rem, 3.4vw, 3rem); line-height: 1; margin: 16px 0 16px; }
+  .erp-side h3 em { color: var(--mint); }
+  .erp-side p { color: var(--muted); line-height: 1.75; font-size: .94rem; }
+  .feat-list { list-style: none; display: grid; gap: 10px; margin: 24px 0 26px; }
+  .feat-list li { display: flex; align-items: center; gap: 10px; font-size: .86rem; color: var(--muted); }
+  .feat-list svg { color: var(--mint); flex: none; }
+  .run-note { font-size: .7rem; letter-spacing: .16em; text-transform: uppercase; color: var(--muted); margin-bottom: 8px; }
+  .run-cmd {
+    display: inline-block; font-family: ui-monospace, "Cascadia Code", Consolas, monospace;
+    font-size: .84rem; padding: 12px 18px; border-radius: 12px;
+    background: rgba(126, 240, 200, .08); border: 1px solid rgba(126, 240, 200, .28); color: var(--mint);
+  }
+
+  /* Footer */
+  .site-footer { border-top: 1px solid var(--line); background: var(--ink-2); padding: 40px 0; }
+  .footer-row { display: flex; align-items: center; justify-content: space-between; gap: 18px; flex-wrap: wrap; color: var(--muted); font-size: .78rem; letter-spacing: .03em; }
+  .footer-row .mini-brand { display: inline-flex; align-items: center; gap: 10px; color: var(--paper); font-weight: 800; letter-spacing: .16em; font-size: .82rem; }
+  .footer-row .mini-brand i { width: 26px; height: 26px; border-radius: 50%; background: var(--green); color: var(--ink); display: grid; place-items: center; font-family: var(--serif); font-style: normal; font-size: .95rem; }
+  .footer-row a { color: var(--muted); text-decoration: none; transition: color .2s ease; }
+  .footer-row a:hover { color: var(--green); }
+
+  /* Reveal */
+  .reveal { opacity: 0; transform: translateY(24px); transition: opacity .8s cubic-bezier(.2, .7, .2, 1), transform .8s cubic-bezier(.2, .7, .2, 1); }
+  .reveal.in-view { opacity: 1; transform: none; }
+
+  /* Responsive */
+  @media (max-width: 1024px) {
+    .benefits { grid-template-columns: 1fr 1fr; }
+    .erp-grid { grid-template-columns: 1fr; }
+  }
+  @media (max-width: 880px) {
+    .nav-links { display: none; }
+    .split { grid-template-columns: 1fr; }
+    .product-grid { grid-template-columns: 1fr; }
+    .plans { grid-template-columns: 1fr; }
+    .philosophy { grid-template-columns: 1fr; }
+    .product-stage { max-width: 420px; margin-inline: auto; }
+    .bottle-stage { order: -1; }
+  }
+  @media (max-width: 620px) {
+    .benefits { grid-template-columns: 1fr; }
+    .stats { grid-template-columns: 1fr; }
+    .brand-name small { display: none; }
+    .quick { gap: 8px; }
+    .cta-row .btn { width: 100%; }
+  }
+  @media (min-width: 1800px) {
+    .shell { width: min(1440px, 88%); }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    *, *::before, *::after {
+      animation-duration: .01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: .01ms !important;
+    }
+    .reveal { opacity: 1; transform: none; }
+  }
+</style>
+</head>
+<body>
+
+<header class="site-header" id="top">
+  <div class="shell nav-shell">
+    <a class="brand" href="#top" aria-label="All projects home">
+      <span class="brand-mark">F</span>
+      <span class="brand-name">FARHAN<small>ALL PROJECTS</small></span>
+    </a>
+    <nav class="nav-links" aria-label="Primary">
+      <a href="#skincare">Skincare</a>
+      <a href="#fragrances">Fragrances</a>
+      <a href="#erp">Salon ERP</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+  <!-- Intro -->
+  <section class="intro">
+    <div class="shell reveal">
+      <p class="eyebrow">Portfolio · 2026</p>
+      <h1>Three projects.<br />One <em>place.</em></h1>
+      <p class="lead">
+        Every project I have built, brought together on a single page — a skincare
+        landing site, a luxury fragrance storefront and a full salon management system.
+        Scroll to explore each one.
+      </p>
+      <div class="quick">
+        <a href="#skincare"><i></i>01 — Farhan Skincare</a>
+        <a href="#fragrances" class="g"><i></i>02 — MFK Fragrances</a>
+        <a href="#erp" class="m"><i></i>03 — Salon ERP</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 01 SKINCARE -->
+  <section class="section sec-skincare" id="skincare">
+    <div class="shell">
+      <div class="proj-head reveal">
+        <div>
+          <span class="num">01 — Landing page</span>
+          <h2>Farhan <em>Skincare</em></h2>
+        </div>
+        <p>A pH-balanced daily cleanser. Conversion-focused layout with product art, benefits and pricing.</p>
+      </div>
+
+      <div class="split">
+        <div class="split-copy reveal">
+          <p class="eyebrow" style="color: var(--green)">The daily reset</p>
+          <h3>Wash away<br />the <em>day.</em></h3>
+          <p>
+            Farhan is a pH-balanced face wash that lifts away oil, dirt and pollution
+            without stripping your skin. Sixty seconds to clean, calm, confident skin.
+          </p>
+          <div class="cta-row">
+            <a href="#skincare-plans" class="btn btn-solid btn-lg">
+              See the packs
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+            <a href="#fragrances" class="btn btn-outline btn-lg">Next project</a>
+          </div>
+        </div>
+
+        <div class="reveal">
+          <div class="product-stage">
+            <div class="stage-rings" aria-hidden="true"></div>
+            <div class="seal" aria-hidden="true">
+              <svg viewBox="0 0 100 100">
+                <defs><path id="sealPath" d="M 50,50 m -34,0 a 34,34 0 1,1 68,0 a 34,34 0 1,1 -68,0" fill="none" /></defs>
+                <text><textPath href="#sealPath" startOffset="0">DERMATOLOGIST TESTED · pH 5.5 · VEGAN · </textPath></text>
+              </svg>
+              <span class="seal-core">
+                <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 2l2.4 7.2L22 12l-7.6 2.8L12 22l-2.4-7.2L2 12l7.6-2.8z" fill="currentColor"/></svg>
+              </span>
+            </div>
+            <div class="tube">
+              <span class="cap"></span>
+              <span class="tube-label">
+                <span class="tl-brand">FARHAN</span>
+                <span class="tl-line"></span>
+                <span class="tl-type">Face Wash</span>
+                <span class="tl-meta">pH 5.5 · 150 ml</span>
+              </span>
+              <span class="tube-shine" aria-hidden="true"></span>
+            </div>
+            <div class="chip chip-a"><b>2%</b> Salicylic acid</div>
+            <div class="chip chip-b"><b>0%</b> Sulphates</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="benefits">
+        <div class="benefit reveal">
+          <span class="b-num">01</span>
+          <h4>Deep clean, zero dryness</h4>
+          <p>Micro-foam lifts oil while glycerin keeps moisture locked in.</p>
+        </div>
+        <div class="benefit reveal">
+          <span class="b-num">02</span>
+          <h4>Barrier-first chemistry</h4>
+          <p>Balanced at pH 5.5 to match your skin's natural defence layer.</p>
+        </div>
+        <div class="benefit reveal">
+          <span class="b-num">03</span>
+          <h4>Calms as it clears</h4>
+          <p>Aloe vera and green tea soothe redness from the first wash.</p>
+        </div>
+        <div class="benefit reveal">
+          <span class="b-num">04</span>
+          <h4>Made for every day</h4>
+          <p>Gentle enough for morning and night, for all skin types.</p>
+        </div>
+      </div>
+
+      <div class="plans" id="skincare-plans">
+        <div class="plan reveal">
+          <span class="plan-name">Starter</span>
+          <span class="plan-sub">150 ml · one bottle</span>
+          <div class="plan-price">$12</div>
+          <a href="#skincare" class="btn btn-outline">Choose Starter</a>
+        </div>
+        <div class="plan featured reveal">
+          <span class="plan-name">Glow Pack</span>
+          <span class="plan-sub">3 × 150 ml · save 20%</span>
+          <div class="plan-price">$29</div>
+          <a href="#skincare" class="btn btn-solid">Choose Glow Pack</a>
+        </div>
+        <div class="plan reveal">
+          <span class="plan-name">Family</span>
+          <span class="plan-sub">6 × 150 ml · save 30%</span>
+          <div class="plan-price">$49</div>
+          <a href="#skincare" class="btn btn-outline">Choose Family</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 02 FRAGRANCES -->
+  <section class="section sec-fragrance" id="fragrances">
+    <div class="shell">
+      <div class="proj-head reveal">
+        <div>
+          <span class="num">02 — Storefront</span>
+          <h2>MFK <em>Fragrances</em></h2>
+        </div>
+        <p>A luxury fragrance concept with a floating bottle hero, dynamic collection and direct ordering.</p>
+      </div>
+
+      <div class="split">
+        <div class="split-copy reveal">
+          <p class="eyebrow" style="color: var(--gold)">The essence of luxury</p>
+          <h3>Define your<br /><em>signature.</em></h3>
+          <p>
+            Discover the elegance of MFK Fragrances. Timeless scents, sophisticated
+            character and a memorable fragrance experience.
+          </p>
+          <div class="cta-row">
+            <a href="#mfk-collection" class="btn btn-solid btn-lg">
+              Explore collection
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+            <a href="#erp" class="btn btn-outline btn-lg">Next project</a>
+          </div>
+        </div>
+
+        <div class="bottle-stage reveal" aria-label="Illustrated MFK perfume bottle">
+          <div class="bottle">
+            <b>MFK</b>
+            <small>FRAGRANCES</small>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-grid" id="mfk-collection">
+        <article class="product reveal">
+          <div class="product-art"><div class="mini">MFK</div></div>
+          <h4>Royal Oud</h4>
+          <p class="notes">Rich oud and warm woody notes</p>
+          <div class="price">Price on request</div>
+          <a href="#fragrances" class="btn btn-outline btn-sm">Enquire</a>
+        </article>
+        <article class="product reveal">
+          <div class="product-art"><div class="mini">MFK</div></div>
+          <h4>Midnight</h4>
+          <p class="notes">Bold amber and deep musk</p>
+          <div class="price">Price on request</div>
+          <a href="#fragrances" class="btn btn-outline btn-sm">Enquire</a>
+        </article>
+        <article class="product reveal">
+          <div class="product-art"><div class="mini">MFK</div></div>
+          <h4>Bloom</h4>
+          <p class="notes">Soft floral and fresh citrus</p>
+          <div class="price">Price on request</div>
+          <a href="#fragrances" class="btn btn-outline btn-sm">Enquire</a>
+        </article>
+      </div>
+
+      <div class="philosophy reveal">
+        <span class="ph-mark">MFK</span>
+        <p>At MFK Fragrances, we believe a signature scent is more than an accessory. It is an expression of personality, confidence and individuality.</p>
+        <a href="#fragrances" class="btn btn-solid btn-sm">Discover MFK</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 03 SALON ERP -->
+  <section class="section sec-erp" id="erp">
+    <div class="shell">
+      <div class="proj-head reveal">
+        <div>
+          <span class="num">03 — Web application</span>
+          <h2>New Trimmer <em>Salon ERP</em></h2>
+        </div>
+        <p>A salon management and financial analytics dashboard built with Next.js, React and Supabase.</p>
+      </div>
+
+      <div class="erp-grid">
+        <div class="window reveal">
+          <div class="win-bar" aria-hidden="true">
+            <i></i><i></i><i></i>
+            <span>Dashboard — New Trimmer</span>
+          </div>
+          <div class="win-body">
+            <p class="win-title">This week</p>
+            <div class="stats">
+              <div class="stat">
+                <small>Revenue</small>
+                <b>$12,480</b>
+                <span class="up">▲ 18.4%</span>
+              </div>
+              <div class="stat">
+                <small>Bookings</small>
+                <b>148</b>
+                <span class="up">▲ 9.2%</span>
+              </div>
+              <div class="stat">
+                <small>Avg. ticket</small>
+                <b>$84</b>
+                <span class="up">▲ 4.7%</span>
+              </div>
+            </div>
+
+            <div class="chart" aria-hidden="true">
+              <div class="bar"><span style="--h: 46%"></span><em>Mon</em></div>
+              <div class="bar"><span style="--h: 68%"></span><em>Tue</em></div>
+              <div class="bar"><span style="--h: 54%"></span><em>Wed</em></div>
+              <div class="bar"><span style="--h: 88%"></span><em>Thu</em></div>
+              <div class="bar"><span style="--h: 72%"></span><em>Fri</em></div>
+              <div class="bar"><span style="--h: 96%"></span><em>Sat</em></div>
+              <div class="bar"><span style="--h: 58%"></span><em>Sun</em></div>
+            </div>
+
+            <p class="win-title" style="margin-top: 22px">Top services</p>
+            <ul class="services">
+              <li><span class="sname">Haircut &amp; styling</span><span class="sval">$4,120</span><span class="track"><i style="--w: 88%"></i></span></li>
+              <li><span class="sname">Colour treatment</span><span class="sval">$3,260</span><span class="track"><i style="--w: 70%"></i></span></li>
+              <li><span class="sname">Beard trim</span><span class="sval">$2,540</span><span class="track"><i style="--w: 54%"></i></span></li>
+              <li><span class="sname">Facial &amp; skincare</span><span class="sval">$1,980</span><span class="track"><i style="--w: 42%"></i></span></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="erp-side reveal">
+          <p class="eyebrow">Run it locally</p>
+          <h3>Manage the<br /><em>whole salon.</em></h3>
+          <p>
+            Track bookings, staff, services and revenue in one place, with live financial
+            analytics powered by Supabase and Recharts.
+          </p>
+          <ul class="feat-list">
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M20 6 9 17l-5-5" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              Appointments &amp; scheduling
+            </li>
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M20 6 9 17l-5-5" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              Revenue &amp; expense analytics
+            </li>
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M20 6 9 17l-5-5" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              Staff &amp; service management
+            </li>
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M20 6 9 17l-5-5" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              Supabase auth &amp; database
+            </li>
+          </ul>
+          <p class="run-note">Start the app</p>
+          <code class="run-cmd">npm run dev</code>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="shell footer-row">
+    <span class="mini-brand"><i>F</i> FARHAN</span>
+    <span>&copy; <span id="year">2026</span> All projects. Built with care.</span>
+    <a href="#top">Back to top ↑</a>
+  </div>
+</footer>
+
+<script>
+  (function () {
+    var reveals = document.querySelectorAll('.reveal');
+    if ('IntersectionObserver' in window) {
+      var io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('in-view');
+            io.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+      reveals.forEach(function (el) { io.observe(el); });
+    } else {
+      reveals.forEach(function (el) { el.classList.add('in-view'); });
+    }
+
+    document.getElementById('year').textContent = new Date().getFullYear();
+  })();
+</script>
+</body>
+</html>
